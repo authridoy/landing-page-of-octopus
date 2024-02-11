@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     /* --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -85,11 +86,11 @@
     --font-size-h3-lg: 2.75rem; /*  44px*/
     --font-size-h3: 2.5rem; /*  40px*/
 
-    --font-size-h4-lg: 2.125rem; /*  34px*/
-    --font-size-h4: 1.875rem; /*  30px*/
+    --font-size-h4-lg: 2.125rem; /*  38px*/
+    --font-size-h4: 2.125rem; /*  34px*/
 
-    --font-size-h5: 1.5rem; /*  24px*/
-    --font-size-h6: rem; /*  px*/
+    --font-size-h5: 1.875rem; /*  30px*/
+    --font-size-h6: 1.5rem; /*  24px*/
 
     --font-size-p: 1.25rem;  /* 20px*/
 
@@ -120,6 +121,10 @@
     --spacing-14: 3.5rem;/* 56px */
     --spacing-14-5: 3.625rem;/* 58px */
     --spacing-15: 3.75rem;/* 60px */
+
+    --spacing-27-5: 6.875rem;/* 110px */
+    --spacing-30: 7.5rem;/* 120px */
+
 
 
     /* Scrollbar */
@@ -154,6 +159,9 @@ html{
 
 /*===== font size =====*/
 
+a{
+    text-decoration: none;
+}
 
 h1, h2, h3, h4, h5, p{
     margin: var(--spacing-0) !important;
@@ -173,9 +181,29 @@ h3{
 h4{
     font-size: var(--font-size-h4) !important;
 }
+.font-size-h4-lg{
+    font-size: var(--font-size-h4-lg) !important;
+}
 h5{
     font-size: var(--font-size-h5) !important;
 }
+h6{
+    font-size: var(--font-size-h6) !important;
+}
+p{
+    font-size: var(--font-size-p) !important;
+}
+
+.font-size-16{
+    font-size: 1rem !important;
+}
+.font-size-17{
+    font-size: 1.063rem !important;
+}
+.font-size-18{
+    font-size: 1.125rem !important;
+}
+
 
 /*===== color =====*/
 
@@ -185,7 +213,7 @@ h5{
 .bs-blue{
     color: var(--bs-blue) !important;
 }
-.bs-blue.bg{
+.bs-blue-bg{
     background-color : var(--bs-blue) !important;
 }
 .bs-white{
@@ -202,41 +230,171 @@ h5{
 }
 
 
-
-
-
-
-
 /*===== padding =====*/
 
-.py-spacing-1{
-    padding-top: var(--spacing-1) !important;
-    padding-bottom: var(--spacing-1) !important;
+.pb-spacing-2-5{
+    padding-bottom: var(--spacing-2-5) !important;
 }
-.px-spacing-1{
-    padding-left: var(--spacing-1) !important;
-    padding-right: var(--spacing-1) !important;
+.px-spacing-3{
+    padding-left: var(--spacing-3) !important;
+    padding-right: var(--spacing-3) !important;
 }
-.px-spacing-1-5{
-    padding-left: var(--spacing-1-5) !important;
-    padding-right: var(--spacing-1-5) !important;
+.py-spacing-4-5{
+    padding-top: var(--spacing-4-5) !important;
+    padding-bottom: var(--spacing-4-5) !important;
 }
-
-.py-spacing-2{
-    padding-top: var(--spacing-2) !important;
-    padding-bottom: var(--spacing-2) !important;
+.pb-spacing-4-5{
+    padding-bottom: var(--spacing-4-5) !important;
 }
-.px-spacing-2{
-    padding-left: var(--spacing-2) !important;
-    padding-right: var(--spacing-2) !important;
+.pe-spacing-5{
+    padding-right: var(--spacing-5) !important;
 }
-
+.py-spacing-7-5{
+    padding-top: var(--spacing-7-5) !important;
+    padding-bottom: var(--spacing-7-5) !important;
+}
+.pt-spacing-7-5{
+    padding-top: var(--spacing-7-5) !important;
+}
+.py-spacing-12-5{
+    padding-top: var(--spacing-12-5) !important;
+}
+.pb-spacing-15{
+    padding-bottom: var(--spacing-15) !important;
+}
+.pt-spacing-15{
+    padding-top: var(--spacing-15) !important;
+}
+.ps-spacing-30{
+    padding-left: var(--spacing-30) !important;
+}
 
 /*===== margin =====*/
 
-.mt-spacing-5{
-    margin-top: var(--spacing-5) !important;
+.ms-0{
+    margin-left: var(--spacing-0) !important;
+}
+.me-0{
+    margin-right: var(--spacing-0) !important;
+}
+.me-spacing-2-5{
+    margin-right: var(--spacing-2-5) !important;
+}
+.me-spacing-3{
+    margin-right: var(--spacing-3) !important;
+}
+.mt-spacing-7-5{
+    margin-top: var(--spacing-7-5) !important;
+}
+.mt-spacing-8-5{
+    margin-top: var(--spacing-8-5) !important;
+}
+.mb-spacing-11-5{
+    margin-bottom: var(--spacing-11-5) !important;
+}
+.mt-spacing-27-5{
+    margin-top: var(--spacing-27-5) !important;
 }
 
-/*===== radius =====*/
 
+.border{
+    border: 1px solid #D8DDEA !important;
+}
+
+
+
+/*============ sign in ============*/
+.login-section{
+    overflow: hidden;
+}
+.background-wrapper{
+    height: 100vh;
+    max-width: 100%;
+    background: var(--bs-light);
+}
+
+.login-section .col-lg-4{
+    max-width: 508px;
+    min-width: 350px;
+}
+
+.main-logo img{
+    width: 249px;
+    height: 56px;
+}
+
+.signin-wrapper{
+    max-width: 540px;    
+}
+.browser-btnBox a{
+    width: 153px;
+}
+.browser-btnBox a:nth-child(2){
+    margin: 0 var(--spacing-5);
+}
+.divider{
+    position: relative;
+}
+.divider::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #EEEEEE;
+    z-index: -1;
+}
+.divider span{
+    z-index: 1;
+    background: var(--bs-white);
+}
+
+.input-item input::placeholder{
+    color: var(--bs-gray-400);
+}
+
+.signIn-Password button{
+    right: 14px;
+    top: 28%;
+}
+.signin-wrapper form input:focus{
+    box-shadow: none;
+    outline: none;
+    border-color:  #051383 !important;
+}
+
+
+
+
+
+@media (max-width: 1199px){
+    .ps-lg-spacing-10{
+        padding-left: var(--spacing-10)!important;
+    }
+}
+@media (max-width:991.8px){
+    .signin-wrapper {
+        max-width: 400px;
+    }
+    .browser-btnBox a {
+        display: block !important;
+        margin: 20px 0 0!important;
+        width: 100%;
+    }
+    .background-wrapper {
+        height: 990px!important;
+    }
+}
+
+@media (max-width:765.8px){
+    .login-section .col-lg-4 {
+        max-width: 100%!important;
+        height: 500px!important;
+        padding-left: 80px!important;
+    }
+    .signin-wrapper{
+        margin-top: 4rem!important;
+    }
+    
+}
