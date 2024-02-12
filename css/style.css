@@ -122,6 +122,7 @@
     --spacing-14-5: 3.625rem;/* 58px */
     --spacing-15: 3.75rem;/* 60px */
 
+    --spacing-17-5: 4.375rem;/* 70px */
     --spacing-27-5: 6.875rem;/* 110px */
     --spacing-30: 7.5rem;/* 120px */
 
@@ -175,8 +176,14 @@ h1{
 h2{
     font-size: var(--font-size-h2) !important;
 }
+.font-size-h2-lg{
+    font-size: var(--font-size-h2-lg) !important;
+}
 h3{
     font-size: var(--font-size-h3) !important;
+}
+.font-size-h3-lg{
+    font-size: var(--font-size-h3-lg) !important;
 }
 h4{
     font-size: var(--font-size-h4) !important;
@@ -203,6 +210,9 @@ p{
 .font-size-18{
     font-size: 1.125rem !important;
 }
+.font-size-22{
+    font-size: 1.375rem !important;
+}
 
 
 /*===== color =====*/
@@ -216,10 +226,16 @@ p{
 .bs-blue-bg{
     background-color : var(--bs-blue) !important;
 }
+.bs-orange-bg{
+    background-color: #ED683E;
+}
 .bs-white{
     color: var(--bs-white) !important;
 }
 .bs-light{
+    background-color: var(--bs-light) !important;
+}
+.bs-light-bg{
     background-color: var(--bs-light) !important;
 }
 .bs-gray{
@@ -227,6 +243,9 @@ p{
 }
 .bs-gray-400{
     color: var(--bs-gray-400) !important;
+}
+.bs-highlight-bg{
+    background-color: var(--bs-highlight-bg) !important;
 }
 
 
@@ -246,15 +265,42 @@ p{
 .pb-spacing-4-5{
     padding-bottom: var(--spacing-4-5) !important;
 }
+.px-spacing-5{
+    padding-left: var(--spacing-5) !important;
+    padding-right: var(--spacing-5) !important;
+}
 .pe-spacing-5{
     padding-right: var(--spacing-5) !important;
+}
+.py-spacing-5{
+    padding-top: var(--spacing-5-5) !important;
+    padding-bottom: var(--spacing-5-5) !important;
+}
+.py-spacing-5-5{
+    padding-top: var(--spacing-5) !important;
+    padding-bottom: var(--spacing-5) !important;
+}
+
+.py-spacing-7{
+    padding-top: var(--spacing-7) !important;
+    padding-bottom: var(--spacing-7) !important;
 }
 .py-spacing-7-5{
     padding-top: var(--spacing-7-5) !important;
     padding-bottom: var(--spacing-7-5) !important;
 }
+.pe-spacing-7-5{
+    padding-right: var(--spacing-7-5) !important;
+}
 .pt-spacing-7-5{
     padding-top: var(--spacing-7-5) !important;
+}
+.px-spacing-10-5{
+    padding-left: var(--spacing-10-5) !important;
+    padding-right: var(--spacing-10-5) !important;
+}
+.ps-spacing-12-5{
+    padding-left: var(--spacing-12-5) !important;
 }
 .py-spacing-12-5{
     padding-top: var(--spacing-12-5) !important;
@@ -265,8 +311,19 @@ p{
 .pt-spacing-15{
     padding-top: var(--spacing-15) !important;
 }
+.py-spacing-17-5{
+    padding-top: var(--spacing-17-5) !important;
+    padding-bottom: var(--spacing-17-5) !important;
+}
+.py-spacing-15{
+    padding-top: var(--spacing-15) !important;
+    padding-bottom: var(--spacing-15) !important;
+}
 .ps-spacing-30{
     padding-left: var(--spacing-30) !important;
+}
+.pt-spacing-30{
+    padding-top: var(--spacing-30) !important;
 }
 
 /*===== margin =====*/
@@ -283,14 +340,23 @@ p{
 .me-spacing-3{
     margin-right: var(--spacing-3) !important;
 }
+.mt-spacing-5{
+    margin-top: var(--spacing-5) !important;
+}
 .mt-spacing-7-5{
     margin-top: var(--spacing-7-5) !important;
+}
+.mb-spacing-7-5{
+    margin-bottom: var(--spacing-7-5) !important;
 }
 .mt-spacing-8-5{
     margin-top: var(--spacing-8-5) !important;
 }
 .mb-spacing-11-5{
     margin-bottom: var(--spacing-11-5) !important;
+}
+.mt-spacing-15{
+    margin-top: var(--spacing-15) !important;
 }
 .mt-spacing-27-5{
     margin-top: var(--spacing-27-5) !important;
@@ -300,11 +366,16 @@ p{
 .border{
     border: 1px solid #D8DDEA !important;
 }
-
+.rounded-12{
+    border-radius: 12px!important;
+}
+.rounded-16{
+    border-radius: 16px!important;
+}
 
 
 /*============ sign in ============*/
-.login-section{
+.loginSignup-section{
     overflow: hidden;
 }
 .background-wrapper{
@@ -313,7 +384,7 @@ p{
     background: var(--bs-light);
 }
 
-.login-section .col-lg-4{
+.loginSignup-section .col-lg-4{
     max-width: 508px;
     min-width: 350px;
 }
@@ -365,8 +436,55 @@ p{
 }
 
 
+/* ========================= Home Page ============================= */
+
+.nav-main-logo{
+    width: 231px;
+    height: 52px;
+}
+
+.hero-section{
+    height: 100%;
+    height: 100vh;
+    background-image: url(/images/hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-section img {
+    margin-top: 136px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content-section{
+    margin-top: 367px;
+    padding-bottom: 66px;
+}
+.client-section{
+    width: 100%;
+    height: 480px;
+    background-image: url(/images/client-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.client-section h2{
+    margin-top: 70px!important;
+}
+.client-content{
+    background: var(--bs-white);
+    box-shadow: -20px 20px #DCE7FB;
+    margin-top: -180px;
+}
+.client-content img{
+    width: 100%;
+}
 
 
+
+
+/*========= Responcive =========*/
 
 @media (max-width: 1199px){
     .ps-lg-spacing-10{
@@ -385,10 +503,19 @@ p{
     .background-wrapper {
         height: 990px!important;
     }
+    .background-wrapper {
+        height: 1119px!important;
+    }
+    .client-content img {
+        width: 100%;
+        height: 300px;
+        width: 300px;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width:765.8px){
-    .login-section .col-lg-4 {
+    .loginSignup-section .col-lg-4 {
         max-width: 100%!important;
         height: 500px!important;
         padding-left: 80px!important;
