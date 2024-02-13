@@ -201,6 +201,12 @@ p{
     font-size: var(--font-size-p) !important;
 }
 
+.font-size-14{
+    font-size: 0.875rem !important;
+}
+.font-size-15{
+    font-size: 0.938rem !important;
+}
 .font-size-16{
     font-size: 1rem !important;
 }
@@ -254,6 +260,10 @@ p{
 .pb-spacing-2-5{
     padding-bottom: var(--spacing-2-5) !important;
 }
+.px-spacing-2-5{
+    padding-left: var(--spacing-2-5) !important;
+    padding-right: var(--spacing-2-5) !important;
+}
 .px-spacing-3{
     padding-left: var(--spacing-3) !important;
     padding-right: var(--spacing-3) !important;
@@ -271,6 +281,9 @@ p{
 }
 .pe-spacing-5{
     padding-right: var(--spacing-5) !important;
+}
+.pt-spacing-5{
+    padding-top: var(--spacing-5) !important;
 }
 .py-spacing-5{
     padding-top: var(--spacing-5-5) !important;
@@ -295,15 +308,28 @@ p{
 .pt-spacing-7-5{
     padding-top: var(--spacing-7-5) !important;
 }
+.pb-spacing-8-5{
+    padding-bottom: var(--spacing-8-5) !important;
+}
+.pt-spacing-10{
+    padding-top: var(--spacing-10) !important;
+}
 .px-spacing-10-5{
     padding-left: var(--spacing-10-5) !important;
     padding-right: var(--spacing-10-5) !important;
+}
+.px-spacing-11{
+    padding-left: var(--spacing-11) !important;
+    padding-right: var(--spacing-11) !important;
 }
 .ps-spacing-12-5{
     padding-left: var(--spacing-12-5) !important;
 }
 .py-spacing-12-5{
     padding-top: var(--spacing-12-5) !important;
+}
+.pt-spacing-14{
+    padding-top: var(--spacing-14) !important;
 }
 .pb-spacing-15{
     padding-bottom: var(--spacing-15) !important;
@@ -324,6 +350,10 @@ p{
 }
 .pt-spacing-30{
     padding-top: var(--spacing-30) !important;
+}
+.py-spacing-40{
+    padding-top: 160px!important;
+    padding-bottom: 160px!important;
 }
 
 /*===== margin =====*/
@@ -350,7 +380,7 @@ p{
     margin-bottom: var(--spacing-7-5) !important;
 }
 .mt-spacing-8-5{
-    margin-top: var(--spacing-8-5) !important;
+    margin-top: 2rem!important;
 }
 .mb-spacing-11-5{
     margin-bottom: var(--spacing-11-5) !important;
@@ -482,6 +512,17 @@ p{
 }
 
 
+.footer-section{
+    background-color: #010048;
+}
+.footer-section .footer-main-logo{
+    width: 183px;
+    height: 100px;
+}
+.footer-section .social-icon img{
+ width: 17px;
+}
+
 
 
 /*========= Responcive =========*/
@@ -490,6 +531,26 @@ p{
     .ps-lg-spacing-10{
         padding-left: var(--spacing-10)!important;
     }
+    .content-section {
+        margin-top: 148px;
+    }
+    .client-section {
+        height: 270px;
+    }
+    .client-section h2 {
+        margin: 0!important;
+    }
+    .client-content {
+        margin-top: 0;
+    }
+    .pt-lg-spacing-8{
+        padding-top: 2rem !important;
+    }
+    .px-lg-spacing-15{
+        padding-top: var(--spacing-15)!important;
+        padding-bottom: var(--spacing-15)!important;
+    }
+    
 }
 @media (max-width:991.8px){
     .signin-wrapper {
@@ -508,9 +569,33 @@ p{
     }
     .client-content img {
         width: 100%;
-        height: 300px;
-        width: 300px;
+        height: 200px;
+        width: 200px;
         margin-top: 20px;
+    }
+    .social-icon{
+        text-align: center!important;
+    }
+    h1{
+        font-size: 70px!important;
+    }
+    .pt-md-spacing-15{
+        padding-top: var(--spacing-15) !important;
+    }
+    .mt-md-spacing-15{
+        margin-top: var(--spacing-15) !important;
+    }
+    .hero-section {
+        height: 850px;
+    }
+    .content-section {
+        margin-top: 50px;
+    }
+    h6 {
+        font-size: 22px!important;
+    }
+    .pt-md-spacing-8{
+        padding-top: 2rem !important;
     }
 }
 
@@ -523,5 +608,41 @@ p{
     .signin-wrapper{
         margin-top: 4rem!important;
     }
+    .pt-sm-spacing-7{
+        padding-top: var(--spacing-7)!important;
+    }
+    .mt-sm-spacing-5{
+        margin-top: var(--spacing-5) !important;
+    }
     
+    h1{
+        font-size: 50px!important;
+    }
+    .hero-section {
+        height: 700px;
+    }
+    h3 {
+        font-size: 32px!important;
+    }
+    .font-size-h3-lg {
+        font-size: 30px!important;
+    }
+    .client-section h2 {
+        padding: 0!important;
+        font-size: 40px!important;
+    }
+    .client-section {
+        padding: 70px 0;
+    }
+
+    .font-size-sm-30{
+        font-size: 1.875rem!important;
+    }
+    
+    
+}
+@media (max-width:575.8px){
+    .text-xs-center{
+        text-align: center;
+    }
 }
