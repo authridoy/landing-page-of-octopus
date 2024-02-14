@@ -355,6 +355,9 @@ p{
     padding-top: 160px!important;
     padding-bottom: 160px!important;
 }
+.pb-spacing-50{
+    padding-bottom: 200px !important;
+}
 
 /*===== margin =====*/
 
@@ -467,10 +470,38 @@ p{
 
 
 /* ========================= Home Page ============================= */
+.box-btn{
+    transition: .3s ease-out;
+}
+.box-btn:hover{
+    color: #FFFFFF!important;
+    background-color: #ED683E!important;
+    border-color: #ED683E!important;
+}
 
 .nav-main-logo{
     width: 231px;
     height: 52px;
+}
+.nav-link{
+   transition: .3s ease-out; 
+   position: relative;
+}
+.nav-link:hover{
+    color: #ED683E!important;
+}
+.nav-link::before{
+    position: absolute;
+    content: '';
+    bottom: 7px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ED683E!important;
+    transition: .4s ease-out;
+}
+.nav-link:hover::before{
+    width: 100%;
 }
 
 .hero-section{
@@ -493,19 +524,17 @@ p{
 }
 .client-section{
     width: 100%;
-    height: 480px;
+    height: 100%;
     background-image: url(/images/client-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.client-section h2{
-    margin-top: 70px!important;
-}
+
 .client-content{
     background: var(--bs-white);
     box-shadow: -20px 20px #DCE7FB;
-    margin-top: -180px;
+    margin-top: -143px;
 }
 .client-content img{
     width: 100%;
@@ -515,6 +544,12 @@ p{
 .footer-section{
     background-color: #010048;
 }
+.footer-nav-link a{
+    transition: .3s ease-out;
+}
+.footer-nav-link a:hover{
+    color: #ED683E!important;
+}
 .footer-section .footer-main-logo{
     width: 183px;
     height: 100px;
@@ -523,19 +558,17 @@ p{
  width: 17px;
 }
 
-
-
 /*========= Responcive =========*/
 
+
+
+/* ================= screan 1200 px ================= */
 @media (max-width: 1199px){
     .ps-lg-spacing-10{
         padding-left: var(--spacing-10)!important;
     }
     .content-section {
         margin-top: 148px;
-    }
-    .client-section {
-        height: 270px;
     }
     .client-section h2 {
         margin: 0!important;
@@ -550,8 +583,34 @@ p{
         padding-top: var(--spacing-15)!important;
         padding-bottom: var(--spacing-15)!important;
     }
+    h1 {
+        font-size: 50px!important;
+    }
+    h3 {
+        font-size: 30px!important;
+    }
+    h2 {
+        font-size: 40px!important;
+    }
+    .client-section h2 {
+        font-size: 50px!important;
+    }
+    .py-lg-spacing-15{
+        padding-top: var(--spacing-15) !important;
+        padding-bottom: var(--spacing-15) !important;
+    }
+    .client-content {
+        margin-left: 20px;
+    }
     
 }
+.navbar-collapse {
+    transition: .3s ease-in;
+}
+
+
+
+/* ================= screan 992px ================= */
 @media (max-width:991.8px){
     .signin-wrapper {
         max-width: 400px;
@@ -576,9 +635,6 @@ p{
     .social-icon{
         text-align: center!important;
     }
-    h1{
-        font-size: 70px!important;
-    }
     .pt-md-spacing-15{
         padding-top: var(--spacing-15) !important;
     }
@@ -591,15 +647,66 @@ p{
     .content-section {
         margin-top: 50px;
     }
-    h6 {
-        font-size: 22px!important;
-    }
     .pt-md-spacing-8{
         padding-top: 2rem !important;
     }
+    h1 {
+        font-size: 50px!important;
+    }
+    h3 {
+        font-size: 30px!important;
+    }
+    h6 {
+        font-size: 22px!important;
+    }
+    .font-size-h3-lg {
+        font-size: 30px!important;
+    }
+    p {
+        font-size: 18px!important;
+    }
+    .font-size-sm-30 {
+        font-size: 1.875rem!important;
+    }
+    .py-md-spacing-15 {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    
+/* .navbar-collapse {
+    position: absolute;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    left: 0;
+    top: 119px;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+} */
+.collapse:not(.show) {
+    display: none;
+}
+.navbar-collapse {
+    position: absolute;
+    align-items: center;
+    top: 109px;
+    right: 0;
+    height: 100vh;
+    background: #fff;
+    padding: var(--spacing-7-5) !important;
+    width: 300px;
+}
+.navbar-collapse ul li{
+    padding: var(--spacing-0) !important;
 }
 
-@media (max-width:765.8px){
+}
+
+
+/* ================= screan 767px ================= */
+@media (max-width:766.8px){
     .loginSignup-section .col-lg-4 {
         max-width: 100%!important;
         height: 500px!important;
@@ -614,15 +721,8 @@ p{
     .mt-sm-spacing-5{
         margin-top: var(--spacing-5) !important;
     }
-    
-    h1{
-        font-size: 50px!important;
-    }
     .hero-section {
         height: 700px;
-    }
-    h3 {
-        font-size: 32px!important;
     }
     .font-size-h3-lg {
         font-size: 30px!important;
@@ -631,18 +731,38 @@ p{
         padding: 0!important;
         font-size: 40px!important;
     }
-    .client-section {
-        padding: 70px 0;
-    }
+   
 
     .font-size-sm-30{
         font-size: 1.875rem!important;
     }
-    
+    h1{
+        font-size: 40px!important;
+    }
+    h5 {
+        font-size: 24px!important;
+    }
+    h3 {
+        font-size: 26px!important;
+    }
+    .font-size-h3-lg {
+        font-size: 28px!important;
+    }
     
 }
+
+/* ================= screan 576px ================= */
 @media (max-width:575.8px){
     .text-xs-center{
         text-align: center;
+    }
+    .d-xs-unset{
+        display: unset !important;
+    }
+    .mt-xs-spacing{
+        margin-top: var(--spacing-5) !important;
+    }
+    .w-xs-100{
+        width: 100%;
     }
 }
